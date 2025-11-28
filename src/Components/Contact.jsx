@@ -74,6 +74,10 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const playSound = ()=>{
+    const audio = new Audio("/src/assets/submit.wav")
+    audio.play()
+    }
 
     if (
       !contactData.name ||
@@ -113,6 +117,7 @@ const Contact = () => {
       phone: "",
       message: "",
     });
+    playSound();
   };
 
   return (
